@@ -17,9 +17,29 @@ Let's take a look at the datas in the dataset
 head(City_Employee_Payroll)
 ```
 
+Change the Varible tyoe into reasonable ones
+
+```{r}
+City_Employee_Payroll$Year <- as.factor(City_Employee_Payroll$Year)
+City_Employee_Payroll$`Department Title` <- as.factor(City_Employee_Payroll$`Department Title`)
+City_Employee_Payroll$`Job Class Title` <- as.factor(City_Employee_Payroll$`Job Class Title`)
+City_Employee_Payroll$`Employment Type`<- as.factor(City_Employee_Payroll$`Employment Type`)
+City_Employee_Payroll$`Payroll Department` <- as.factor(City_Employee_Payroll$`Payroll Department`)
+City_Employee_Payroll$`MOU Title` <- as.factor(City_Employee_Payroll$`MOU Title`)
+City_Employee_Payroll$`FMS Department` <- as.factor(City_Employee_Payroll$`FMS Department`)
+City_Employee_Payroll$`Job Class` <- as.factor(City_Employee_Payroll$`Job Class`)
+City_Employee_Payroll$`Pay Grade`<- as.factor(City_Employee_Payroll$`Pay Grade`)
+City_Employee_Payroll$`Benefits Plan` <- as.factor(City_Employee_Payroll$`Benefits Plan`)
+City_Employee_Payroll$`Job Class Link` <- as.factor(City_Employee_Payroll$`Job Class Link`)
 
 
 
 
+```
 
 
+Take a look at the summary of the new dataset with right varible type
+```{r}
+summary(City_Employee_Payroll)
+str(City_Employee_Payroll)
+```
