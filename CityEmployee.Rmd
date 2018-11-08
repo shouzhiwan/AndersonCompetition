@@ -33,10 +33,11 @@ City_Employee_Payroll$`Benefits Plan` <- as.factor(City_Employee_Payroll$`Benefi
 City_Employee_Payroll$`Job Class Link` <- as.factor(City_Employee_Payroll$`Job Class Link`)
 ```
 
-
 Take a look at the summary of the new dataset with right varible type
 ```{r}
 
+class(City_Employee_Payroll)
+dim(City_Employee_Payroll)
 summary(City_Employee_Payroll)
 str(City_Employee_Payroll)
 ```
@@ -45,6 +46,9 @@ Seperate the predict data set and training data set.
 ```{r}
 predictset <- City_Employee_Payroll[City_Employee_Payroll$Year == 2018,]
 train <- City_Employee_Payroll[City_Employee_Payroll$Year != 2018,]
-
+attach(train)
 summary(train)
 ```
+
+Basic visualization of data set.
+```{r}
