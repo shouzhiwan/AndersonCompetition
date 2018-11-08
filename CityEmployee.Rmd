@@ -7,6 +7,9 @@ output: html_document
 
 Let's take a look at the summary and the structure of dataset provided.
 ```{r}
+library(readr)
+City_Employee_Payroll <- read_csv("City_Employee_Payroll.csv")
+View(City_Employee_Payroll)
 summary(City_Employee_Payroll)
 str(City_Employee_Payroll)
 ```
